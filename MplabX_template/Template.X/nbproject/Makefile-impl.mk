@@ -27,11 +27,11 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 PROJECTNAME=Template.X
 
 # Active Configuration
-DEFAULTCONF=default
+DEFAULTCONF=XC8
 CONF=${DEFAULTCONF}
 
 # All Configurations
-ALLCONFS=default 
+ALLCONFS=XC8 SDCC Assembly 
 
 
 # build
@@ -45,13 +45,17 @@ ALLCONFS=default
 
 # clobber
 .clobber-impl: .clobber-pre .depcheck-impl
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=default clean
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=XC8 clean
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=SDCC clean
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Assembly clean
 
 
 
 # all
 .all-impl: .all-pre .depcheck-impl
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=default build
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=XC8 build
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=SDCC build
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Assembly build
 
 
 
