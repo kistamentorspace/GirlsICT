@@ -1,2 +1,2 @@
 # GirlsICT
-Software Repository for Girls ICT event in KTH mentor space 
+Software Repository for Girls in ICT event in KTH mentor space 
